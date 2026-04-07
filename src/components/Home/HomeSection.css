@@ -1,12 +1,14 @@
 #home {
   padding-top: 120px;
 }
+
 .home-hero {
   position: relative;
   height: 100vh;
   width: 100%;
   background-size: cover;
   background-position: center;
+  background-attachment: scroll; /* smooth mobile rendering */
   display: flex;
   align-items: center;
 }
@@ -17,9 +19,9 @@
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.85),
-    rgba(0, 0, 0, 0.55),
-    rgba(0, 0, 0, 0.2)
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.4)
   );
   z-index: 1;
 }
@@ -34,7 +36,7 @@
   padding: 0 64px;
 }
 
-/* Left-aligned content column */
+/* Content */
 .home-content {
   max-width: 620px;
   color: #ffffff;
@@ -48,7 +50,7 @@
   margin-bottom: 18px;
 }
 
-/* Main heading */
+/* Title */
 .home-title {
   font-size: 54px;
   font-weight: 700;
@@ -70,4 +72,92 @@
   font-size: 16px;
   line-height: 1.7;
   color: #e5e7eb;
+}
+
+/* ===============================
+   RESPONSIVE FIXES
+================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .home-container {
+    padding: 0 40px;
+  }
+
+  .home-title {
+    font-size: 44px;
+  }
+
+  .home-description {
+    font-size: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  #home {
+    padding-top: 100px;
+  }
+
+  .home-hero {
+    height: auto;
+    min-height: 100vh;
+    padding: 60px 0;
+    align-items: flex-start;
+
+    background-position: center top; /* 🔥 FIXED IMAGE */
+  }
+
+  /* Stronger overlay for readability */
+  .home-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.7)
+    );
+  }
+
+  .home-container {
+    padding: 0 20px;
+  }
+
+  .home-content {
+    max-width: 100%;
+    padding-top: 20px;
+  }
+
+  .home-tag {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .home-title {
+    font-size: 32px; /* improved readability */
+    line-height: 1.25;
+  }
+
+  .home-highlight {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+  }
+
+  .home-description {
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .home-container {
+    padding: 0 16px;
+  }
+
+  .home-title {
+    font-size: 26px;
+  }
+
+  .home-description {
+    font-size: 13.5px;
+  }
 }

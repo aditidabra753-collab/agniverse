@@ -133,3 +133,107 @@
 .image-gallery.single img {
   max-height: 500px;
 }
+
+/* ===============================
+   RESPONSIVE FIXES (NON-DESTRUCTIVE)
+================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .product-detail {
+    padding: 100px 0;
+  }
+
+  .product-detail-container {
+    padding: 0 32px;
+  }
+
+  .product-title {
+    font-size: 36px;
+  }
+
+  .product-tagline {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  .product-detail-grid {
+    gap: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .product-detail {
+    padding: 80px 0;
+  }
+
+  .product-detail-container {
+    padding: 0 20px;
+  }
+
+  .product-title {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .product-tagline {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  /* 🔥 MOST IMPORTANT FIX */
+  .product-detail-grid {
+    grid-template-columns: 1fr;  /* stack layout */
+    gap: 30px;
+  }
+
+  .product-text p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .product-text h3 {
+    font-size: 18px;
+  }
+
+  /* Images */
+  .image-gallery img {
+    max-height: 260px;
+    padding: 6px;
+  }
+
+  .image-gallery.single img {
+    max-height: 320px;
+  }
+
+  /* CTA */
+  .product-cta {
+    margin-top: 50px;
+  }
+
+  .product-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 12px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .product-detail-container {
+    padding: 0 16px;
+  }
+
+  .product-title {
+    font-size: 22px;
+  }
+
+  .product-tagline {
+    font-size: 13px;
+  }
+
+  .product-text p {
+    font-size: 13.5px;
+  }
+}

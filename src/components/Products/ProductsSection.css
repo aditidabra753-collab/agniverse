@@ -36,3 +36,74 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
 }
+/* ===============================
+   RESPONSIVE FIXES (NON-DESTRUCTIVE)
+================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .products-section {
+    padding: 80px 0;
+  }
+
+  .products-title {
+    font-size: 30px;
+  }
+
+  .products-intro {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .products-grid {
+    gap: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .products-section {
+    padding: 70px 0;
+  }
+
+  .products-container {
+    padding: 0 20px;
+  }
+
+  .products-eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .products-title {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .products-intro {
+    font-size: 13.5px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  /* 🔥 MOST IMPORTANT FIX */
+  .products-grid {
+    grid-template-columns: 1fr;  /* stack cards */
+    gap: 20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .products-container {
+    padding: 0 16px;
+  }
+
+  .products-title {
+    font-size: 22px;
+  }
+
+  .products-intro {
+    font-size: 13px;
+  }
+}
