@@ -1,0 +1,158 @@
+/* ===============================
+   TARGETS – LIGHT PROFESSIONAL UI
+================================ */
+
+.targets-section {
+  background: #ffffff;
+  padding: 140px 0;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.targets-section.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.targets-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- HEADER ---------- */
+
+.targets-header {
+  max-width: 720px;
+  margin-bottom: 80px;
+}
+
+.targets-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #92400e;
+  margin-bottom: 14px;
+}
+
+.targets-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #020617;
+  margin-bottom: 18px;
+}
+
+.targets-subtitle {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+/* ---------- GRID ---------- */
+
+.targets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ---------- CARD ---------- */
+
+.target-card {
+  position: relative;
+  border: 1px solid #e5e7eb;
+  padding: 34px 26px;
+  background: #ffffff;
+  transform: translateY(30px);
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease,
+    box-shadow 0.3s ease;
+}
+
+.targets-section.reveal .target-card {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.target-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover overlay (soft image-like effect) */
+.target-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(241, 245, 249, 0.95),
+    rgba(226, 232, 240, 0.6)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.target-card:hover::before {
+  opacity: 1;
+}
+
+.target-card * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- ICON ---------- */
+
+.icon svg {
+  width: 34px;
+  height: 34px;
+  stroke: #92400e;
+  stroke-width: 1.6;
+  fill: none;
+  margin-bottom: 18px;
+}
+
+/* ---------- TEXT ---------- */
+
+.target-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #020617;
+  margin-bottom: 10px;
+}
+
+.target-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* Hover text refinement */
+.target-card:hover .target-description {
+  color: #020617;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1100px) {
+  .targets-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .targets-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .targets-grid {
+    grid-template-columns: 1fr;
+  }
+}

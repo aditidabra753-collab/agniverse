@@ -1,0 +1,135 @@
+.product-detail {
+  padding: 120px 0;
+  background: linear-gradient(to bottom, #ffffff, #f8fafc);
+}
+
+.product-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+/* Back link */
+.back-link {
+  font-size: 14px;
+  color: #92400e;
+  text-decoration: none;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.back-link:hover {
+  opacity: 0.7;
+}
+
+/* Title */
+.product-title {
+  font-size: 46px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.product-tagline {
+  font-size: 18px;
+  color: #64748b;
+  margin-bottom: 48px;
+}
+
+/* Grid */
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 60px;
+}
+
+/* Text */
+.product-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #334155;
+  margin-bottom: 18px;
+}
+
+.product-text h3 {
+  margin-top: 32px;
+  margin-bottom: 14px;
+  font-size: 20px;
+}
+
+.product-text li {
+  margin-bottom: 10px;
+}
+
+/* Visual */
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border: 1px dashed #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+/* CTA */
+.product-cta {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.product-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #111827, #000);
+  color: #fff;
+  padding: 16px 36px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.product-button:hover {
+  transform: translateY(-4px);
+}
+
+.image-gallery {
+  display: flex;
+  flex-direction: column; /* ✅ vertical stacking */
+  gap: 20px;
+}
+
+/* IMAGE GALLERY */
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* IMAGES */
+.image-gallery img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: contain;   /* 🔥 FIXED */
+  height: auto;          /* 🔥 FIXED */
+  max-height: 400px;     /* control size */
+  background: #f1f5f9;   /* optional clean bg */
+  padding: 8px;          /* optional spacing */
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.02);
+}
+
+/* MULTIPLE IMAGES */
+.image-gallery.multi img {
+  max-height: 280px;
+}
+
+/* SINGLE IMAGE */
+.image-gallery.single img {
+  max-height: 500px;
+}

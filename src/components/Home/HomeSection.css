@@ -1,0 +1,73 @@
+#home {
+  padding-top: 120px;
+}
+.home-hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+/* Overlay */
+.home-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.2)
+  );
+  z-index: 1;
+}
+
+/* Grid container */
+.home-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+/* Left-aligned content column */
+.home-content {
+  max-width: 620px;
+  color: #ffffff;
+}
+
+/* Tag */
+.home-tag {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #fbbf24;
+  margin-bottom: 18px;
+}
+
+/* Main heading */
+.home-title {
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 26px;
+}
+
+/* Highlight */
+.home-highlight {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  color: #fbbf24;
+  margin-bottom: 22px;
+}
+
+/* Description */
+.home-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #e5e7eb;
+}

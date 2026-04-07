@@ -1,0 +1,38 @@
+.products-section {
+  background: #eeece7; /* light technical gray */
+  padding: 100px 0;
+}
+
+.products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.products-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #92400e;
+  margin-bottom: 12px;
+}
+
+.products-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #020617;
+  margin-bottom: 18px;
+}
+
+.products-intro {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #475569;
+  max-width: 720px;
+  margin-bottom: 56px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}

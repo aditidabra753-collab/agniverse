@@ -1,0 +1,62 @@
+/* NAVBAR BASE */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* TRANSPARENT STATE */
+.navbar-transparent {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+/* SOLID STATE */
+.navbar-solid {
+  background: #000000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* LOGO */
+.navbar-logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease, height 0.3s ease;
+}
+
+/* Shrink logo on scroll */
+.navbar-solid .navbar-logo img {
+  height: 42px;
+}
+
+/* Hover effect */
+.navbar-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* LINKS */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #fbbf24;
+}
